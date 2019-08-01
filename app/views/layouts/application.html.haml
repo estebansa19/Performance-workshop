@@ -8,13 +8,12 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
-    = javascript_include_tag 'https://code.jquery.com/jquery-3.2.1.slim.min.js'
-    %script{src: "https://code.jquery.com/jquery-3.2.1.slim.min.js"}
-    %script{:crossorigin => "anonymous", :integrity => "sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN", :src => "https://code.jquery.com/jquery-3.2.1.slim.min.js"}
-    %script{src: "https://code.jquery.com/jquery-3.2.1.slim.min.js"}
-    %script{src: "https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/umd/react.production.min.js"}
-    %script{src: "https://cdnjs.cloudflare.com/ajax/libs/react-router-dom/5.0.1/react-router-dom.min.js"}
+    %script{:crossorigin => "anonymous", :integrity => "sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=", :src => "https://code.jquery.com/jquery-3.4.1.js"}
+    %script{src: "https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/cjs/react.production.min.js"}
+    %script{src: "https://cdnjs.cloudflare.com/ajax/libs/react-router-dom/5.0.1/react-router-dom.js"}
     %script{src: "https://cdnjs.cloudflare.com/ajax/libs/react-router/5.0.1/react-router.min.js"}
+    %script{src: "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.js"}
+    %script{src: "https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js"}
   %body
     = render 'layouts/partials/navbar'
     - if notice
@@ -25,3 +24,6 @@
             %span{"aria-hidden" => "true"} ×
     = yield
     = render 'layouts/partials/footer'
+
+-# Async CSS script and lazy load script
+-# :javascript
