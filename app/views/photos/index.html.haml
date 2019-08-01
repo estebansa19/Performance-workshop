@@ -1,0 +1,16 @@
+.container.mt-5
+  %h1 Photos
+
+  .new-photo-button.mt-3.mb-3
+    = link_to 'New photo', new_photo_path, class: 'btn btn-success'
+    %br
+
+  .row.text-center.mt-5
+    - @photos.each do |photo|
+      .col-sm-6.p-2
+        .card{:style => "width: 18rem;"}
+          = image_tag photo.image.url(:medium), class: 'card-img-top'
+          .card-body
+            %h5.card-title Card title
+            %p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+            %a.btn.btn-primary{:href => "#"} Go somewhere

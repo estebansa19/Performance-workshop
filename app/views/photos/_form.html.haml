@@ -1,0 +1,6 @@
+.container.mt-5
+  %h2.mb-5 Form for photo
+
+  = form_for @photo, remote: true do |f|
+    = f.file_field :image, as: :file, class: 'form-control', required: true
+    = f.button :submit, class: 'btn btn-success mt-2'
