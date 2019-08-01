@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+(0..30).each do |a|
+  image_path = File.join(Rails.root, 'app', 'assets', 'images', 'upload.jpg')
+
+  Photo.create(
+    image: File.open(image_path)
+  )
+end
